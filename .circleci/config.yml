@@ -3,7 +3,7 @@ version: 2
 jobs:
   up_deploy:
     docker:
-      - image: leapfrogtechnology/envault:0.4.6-node10.16.0-stretch-slim
+      - image: leapfrogtechnology/envault:0.4.6-node14-stretch-slim
     steps:
       - checkout
       - run:
