@@ -9,6 +9,9 @@
       "security_groups": ["sg-0bf483895327eb3a0"]
     }
   },
+  "proxy": {
+    "timeout": 25
+  },
   "stages": {
     "dev": {
 	    "domain": "dev-api.bulletin.lftechnology.com"
