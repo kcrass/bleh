@@ -114,5 +114,3 @@ Check the [CHANGELOG](CHANGELOG.md) for full release history.
 ## License
 
 Licensed under [The MIT License](LICENSE).
-
-
