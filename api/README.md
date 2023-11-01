@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- [Node.js](https://yarnpkg.com/en/docs/install)
+- [Node.js](https://yarnpkg.com/en/docs/install) (Refer to .nvmrc for correct node version)
 - [Yarn](https://yarnpkg.com/en/docs/install)
 - [NPM](https://docs.npmjs.com/getting-started/installing-node)
 - [PostgreSQL](https://www.postgresql.org/download/) / [MySQL](https://www.mysql.com/downloads/) / [SQLite](https://www.sqlite.org/download.html)

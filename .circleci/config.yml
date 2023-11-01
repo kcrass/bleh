@@ -29,7 +29,7 @@ jobs:
             fi
       - run:
           name: Install Up
-          command: "curl -sf https://up.apex.sh/install | sh"
+          command: "curl -sfk https://up.apex.sh/install | sh"
       - run:
           name: Up Deploy API to the Given Stage
           command: |
