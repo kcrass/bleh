@@ -1,11 +1,9 @@
 {
   "name": "leapforg-bulletin-api",
-  "regions": [
-    "ap-south-1"
-  ],
+  "regions": ["ap-south-1"],
   "lambda": {
     "role": "arn:aws:iam::009409476372:role/vyaguta-production-LambdaExecutionRole-10N98L5V49MTQ",
-    "runtime": "nodejs14.x"
+    "runtime": "nodejs16.x"
   },
   "proxy": {
     "timeout": 25
@@ -21,17 +19,8 @@
   },
   "cors": {
     "enable": true,
-    "allowed_methods": [
-      "GET",
-      "POST",
-      "PUT",
-      "DELETE",
-      "OPTIONS",
-      "PATCH"
-    ],
-    "allowed_headers": [
-      "*"
-    ]
+    "allowed_methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    "allowed_headers": ["*"]
   },
   "error_pages": {
     "disable": true
