@@ -3,7 +3,7 @@ version: 2
 jobs:
   up_deploy:
     docker:
-      - image: leapfrogtechnology/envault:0.4.6-node10.16.0-stretch-slim
+      - image: node:16
     steps:
       - checkout
       - run:
@@ -31,6 +31,9 @@ jobs:
           name: Install Up
           command: "curl -sfk https://up.apex.sh/install | sh"
       - run:
+          name: Install envault
+          command: "curl -sf https://raw.githubusercontent.com/pratishshr/envault/master/install.sh | sh"
+      - run:
           name: Up Deploy API to the Given Stage
           command: |
             source ~/.bashrc;
@@ -40,7 +43,7 @@ jobs:
             up deploy $STAGE;
   aws_s3_deploy:
     docker:
-      - image: leapfrogtechnology/envault:0.4.6-node10.16.0-stretch-slim
+      - image: node:16
     steps:
       - checkout
       - run:
@@ -65,6 +68,9 @@ jobs:
               echo "Undefined stage"
             fi
             echo 'export CI=false' >> ~/.bashrc
+      - run:
+          name: Install envault
+          command: "curl -sf https://raw.githubusercontent.com/pratishshr/envault/master/install.sh | sh"
       - run:
           name: Copy Dist Files to AWS S3 Buckets
           command: |
