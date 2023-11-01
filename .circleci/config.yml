@@ -28,6 +28,9 @@ jobs:
               echo "Undefined stage"
             fi
       - run:
+          name: Install aws cli
+          command: "apt update && apt install -y awscli"
+      - run:
           name: Install Up
           command: "curl -sfk https://up.apex.sh/install | sh"
       - run:
@@ -68,6 +71,9 @@ jobs:
               echo "Undefined stage"
             fi
             echo 'export CI=false' >> ~/.bashrc
+      - run:
+          name: Install aws cli
+          command: "apt update && apt install -y awscli"
       - run:
           name: Install envault
           command: "curl -sf https://raw.githubusercontent.com/pratishshr/envault/master/install.sh | sh"
