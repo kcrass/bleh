@@ -1,0 +1,30 @@
+{
+  "name": "@leapfrogtechnology/bulletin-board",
+  "description": "Bulletin Board acts as a platform for sharing useful information regarding ongoing activities at Company/Organization",
+  "version": "4.0.2",
+  "license": "MIT",
+  "repository": "https://github.com/leapfrogtechnology/bulletin-board",
+  "homepage": "https://github.com/leapfrogtechnology/bulletin-board",
+  "bugs": "https://github.com/leapfrogtechnology/bulletin-board/issues",
+  "keywords": [
+    "bulletin-board",
+    "lf-bb",
+    "leapfrog-bulletin-board"
+  ],
+  "scripts": {
+    "changelog": "./release.sh changelog",
+    "release": "./release.sh bump",
+    "lint:fix": "npx lerna run --concurrency 1 --stream lint:fix"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint:fix",
+      "pre-commit": "npx lerna run --concurrency 1 --stream precommit"
+    }
+  }
+}
